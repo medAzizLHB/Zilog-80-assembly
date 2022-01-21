@@ -1,0 +1,13 @@
+	; ORG 2000H ;
+	LD A, 00H;
+	LD B, 00H;
+	LD C, 07H;
+LOOP 	CP C;
+	JP NC, NEXT;
+	LD D, A;
+	ADD A, B;
+	LD B, A;
+	LD A, D;
+	INC A;
+	JP LOOP;
+NEXT 	HALT;
